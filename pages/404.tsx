@@ -16,9 +16,9 @@ export default function NotFoundPage() {
               className='text-yellow-300 animate-flicker drop-shadow-glow'
             />
             <h1 className='mt-8'>Page Not Found</h1>
-            <a className='mt-4' href='/'>
+            <span className='mt-4' >
               Back to Home
-            </a>
+            </span>
           </div>
         </section>
       </main>
