@@ -1,0 +1,190 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+  font-family: 'Fira';
+  src: url('/fonts/fira/woff2/FiraCode-Light.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fira';
+    src: url('/fonts/fira/woff2/FiraCode-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fira';
+    src: url('/fonts/fira/woff2/FiraCode-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fira';
+    src: url('/fonts/fira/woff2/FiraCode-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fira';
+    src: url('/fonts/fira/woff2/FiraCode-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Fira-VF';
+    src: url('/fonts/fira/woff2/FiraCode-VF.woff2') format('woff2-variations');
+    /* font-weight requires a range: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide#Using_a_variable_font_font-face_changes */
+    font-weight: 300 700;
+    font-style: normal;
+  }
+}
+
+@layer utilities {
+  @variants dark {
+
+    .bg-dark {
+        background-color: #1e272e;
+    }
+    .dot {
+   transform: translateX(100%);
+    }
+    .bg-darknight {
+     background-color:  #1a1f26;
+    }
+
+    .filter-grayscale {
+      filter: grayscale(100%);
+    }
+  }
+
+
+  
+.bg-gradient-color {
+    background-image: linear-gradient(to top right,var(--x-gradient-stops))
+}
+
+.from-primary-300 {
+    --x-gradient-from: rgb(var(--xclr-primary-300));
+    --x-gradient-stops: var(--x-gradient-from),var(--x-gradient-to,rgba(var(--xclr-primary-300),0))
+}
+
+.via-primary-300 {
+    --x-gradient-stops: var(--x-gradient-from),rgb(var(--xclr-primary-300)),var(--x-gradient-to,rgba(var(--xclr-primary-300),0))
+}
+
+.to-primary-400 {
+    --x-gradient-to: rgb(var(--xclr-primary-400))
+}
+
+    .text-transparent {
+    color: transparent
+    }
+    .bg-clip-text {
+      -webkit-background-clip: text;
+      background-clip: text
+    }
+
+}
+
+   body {
+    @apply text-xs font-primary;
+  }
+ 
+ h1 {
+    @apply text-2xl font-bold md:text-4xl font-primary;
+  }
+
+  h2 {
+    @apply text-sm font-bold md:text-3xl font-primary;
+  }
+
+  h3 {
+    @apply text-lg font-bold md:text-2xl font-primary;
+  }
+
+  h4 {
+    @apply text-sm font-bold md:text-lg font-primary;
+  }
+
+
+main, header,body {font-family: Fira; }
+footer {color: #333;font-weight: 600}
+.tippy-tooltip [x-circle] {
+  background-color: transparent !important;
+}
+
+.min-h-main {
+  @apply min-h-[calc(100vh-100px)];
+}
+
+.layout {
+  max-width: 68rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 91.666667%
+}
+
+
+:root {
+    --xclr-primary-300: 0,232,135;
+    --xclr-primary-400: 0,224,243;
+    --xclr-primary-500: 0,196,253;
+    --clr-primary-200: rgb(var(--xclr-primary-200));
+    --clr-primary-300: rgb(var(--xclr-primary-300));
+    --clr-primary-400: rgb(var(--xclr-primary-400));
+    --clr-primary-500: rgb(var(--xclr-primary-500))
+}
+
+
+
+[data-fade] {
+  @apply transition duration-[400ms] ease-out translate-y-20 opacity-0 motion-reduce:translate-y-0 motion-reduce:opacity-100;
+}
+.fade-in-start [data-fade] {
+  @apply translate-y-0 opacity-100;
+}
+.fade-in-start [data-fade='1'] {
+  transition-delay: 100ms;
+}
+.fade-in-start [data-fade='2'] {
+  transition-delay: 200ms;
+}
+.fade-in-start [data-fade='3'] {
+  transition-delay: 300ms;
+}
+.fade-in-start [data-fade='4'] {
+  transition-delay: 400ms;
+}
+.fade-in-start [data-fade='5'] {
+  transition-delay: 500ms;
+}
+.fade-in-start [data-fade='6'] {
+  transition-delay: 600ms;
+}
+.fade-in-start [data-fade='7'] {
+  transition-delay: 700ms;
+}
+.fade-in-start [data-fade='8'] {
+  transition-delay: 800ms;
+}
+
+@-webkit-keyframes textglow { 
+  from {
+    text-shadow: 0 0 2px #15F182, 0 0 1px #00FF4F, 0 0 2px #008B8B; 
+  }
+  to {    
+  text-shadow: 0 0 1px #20e23A, 0 0 2px #1898F1, 0 0 2px #20B2AA; 
+  }
+} 
+
+.textglow { 
+ animation:textglow 1s ease-in-out infinite alternate          
+}
