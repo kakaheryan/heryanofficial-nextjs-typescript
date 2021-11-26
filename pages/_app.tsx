@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { AppProps } from 'next/app';
 import { ThemeProvider } from 'next-themes';
 
