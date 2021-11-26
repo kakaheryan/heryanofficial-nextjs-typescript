@@ -36,7 +36,7 @@ const stacks = [
     id: 'nextjs',
     icon: SiNextdotjs,
     tooltip: (
-      <>nextjs, currently using this framework because of the static generation, dynamic paths, and built-in api.
+      <> <TextGradient> nextjs</TextGradient>, currently using this framework because of the static generation, dynamic paths, and built-in api.
       </>
     ),
   },
