@@ -1,10 +1,8 @@
 import { AppProps } from 'next/app';
 import { ThemeProvider } from 'next-themes';
 
-
 import 'react-tippy/dist/tippy.css';
 import '@/styles/globals.css';
-import 'tailwindcss/tailwind.css'
 
 
 function MyApp({ Component, pageProps }: AppProps) {

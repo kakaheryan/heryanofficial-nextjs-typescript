@@ -3,11 +3,14 @@ import * as React from 'react'
 import Link, { LinkProps } from 'next/link';
 // import { InView } from 'react-intersection-observer';
 
-import MetaSeo from '../components/MetaSeo'
-import Layout from '../components/main/Layout'
-import TextGradient from '../components/attribute/Textgr'
-import TechStack from '../components/TechStack'
-import { TypedText } from '../components/attribute/TypedText';
+import MetaSeo from '@/components/MetaSeo'
+import Layout from '@/components/main/Layout'
+import TextGradient from '@/components/attribute/Textgr'
+import TechStack from '@/components/TechStack'
+import { TypedText } from '@/components/attribute/TypedText';
+import Useloaded from '@/hooks/Useloaded'
+
+const isloaded = Useloaded();
 
 export default function IndexPage() {
   return (
@@ -17,7 +20,7 @@ export default function IndexPage() {
         <main>
           <section className={clsx(
               'flex flex-col justify-center mb-10 min-h-main layout',
-                'fade-in-start'
+                isloaded && 'fade-in-start'
           )}>
             <article className='mb-4'>
               <figure className={clsx(

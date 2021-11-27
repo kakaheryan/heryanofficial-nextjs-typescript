@@ -86,17 +86,17 @@ const footerLinks = [
 
 const socials = [
   {
-    href: '/',
+    href: 'https://github.com/kakaheryan',
     icon: SiGithub,
     text: 'Github',
   },
   {
-    href: '/',
+    href: 'https://linkedin.com/kakaheryan',
     icon: SiLinkedin,
     text: 'Linkedin',
   },
   {
-    href: '/',
+    href: 'https://twitter.com/kakaheryan',
     icon: SiTwitter,
     text: 'Twitter',
   },

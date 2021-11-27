@@ -45,8 +45,8 @@ const stacks = [
     icon: SiTypescript,
     tooltip: (
       <>
-        the reason I use this framework. I think this is the next generation of javascript
-      </>
+        The reason I use this framework. TypeScript is a superset of JavaScript which primarily provides optional static typing, classes and interfaces. TypeScript make it easy to organize our code and provides Object Oriented Programming.
+        </>
     ),
   },
   {
@@ -63,8 +63,7 @@ const stacks = [
     icon: SiReact,
     tooltip: (
       <>
-         Great framework for making an
-        authenticated website.
+         <TextGradient> React </TextGradient> is a JavaScript library for building the user interface. React uses the component to divide the whole user interface into small sections and at each component contains its own property and state.
       </>
     ),
   },
@@ -73,7 +72,7 @@ const stacks = [
     icon: SiNodedotjs,
     tooltip: (
       <>
-        I learned all frameworks from here and this is the most experienced
+        Node.js is an open-source, cross platform JavaScript run time environment for executing the JavaScript code at server side. Node.js is used to create Real time, web application and command line applications
       </>
     ),
   },
